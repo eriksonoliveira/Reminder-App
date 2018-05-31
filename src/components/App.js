@@ -37,6 +37,7 @@ class App extends Component {
 
   render() {
     const { reminders } = this.props;
+    console.log(reminders.reminders);
     return(
       <div className="App">
         <div className="title">
