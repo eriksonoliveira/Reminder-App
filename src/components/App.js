@@ -37,7 +37,10 @@ class App extends Component {
 
   render() {
     const { reminders } = this.props;
+<<<<<<< HEAD
     console.log(reminders.reminders);
+=======
+>>>>>>> delete_reminder
     return(
       <div className="App">
         <div className="title">

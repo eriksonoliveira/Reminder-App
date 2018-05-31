@@ -9,8 +9,12 @@
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
+<<<<<<< HEAD
     "sfcookies": "^1.0.2",
     "universal-cookie": "^2.1.5"
+=======
+    "sfcookies": "^1.0.2"
+>>>>>>> delete_reminder
   },
   "scripts": {
     "start": "react-scripts start",

@@ -8,7 +8,11 @@ class Reminder extends Component {
     return (
       <ul className="list-group col-sm-4">
         {
+<<<<<<< HEAD
           this.props.reminders.reminders.map(reminder => {
+=======
+          this.props.reminders.map(reminder => {
+>>>>>>> delete_reminder
             return (
               <li key={reminder.id} className="list-group-item">
                 <div className="list-item">
