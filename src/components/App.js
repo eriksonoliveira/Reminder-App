@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Reminder from './Reminder';
 import Form from './Form';
 import Clear from './Clear';
+import background from '../images/background.jpeg';
 import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from '../actions';
 
@@ -35,29 +36,39 @@ class App extends Component {
     });
   }
 
+
   render() {
+    const backgroundImage = {
+      backgroundImage: `url(${background})`
+    };
+
     const { reminders } = this.props;
     return(
-      <div className="App">
-        <div className="title">
-          Reminder Pro
+      <div
+        className="App"
+        style={backgroundImage}
+        >
+        <div className="content-wrap d-flex flex-column align-items-center container">
+          <div className="title mb-5">
+            Reminde Me
+          </div>
+
+          <Form
+            text={this.state.text}
+            dueDate={this.state.dueDate}
+            handleChange={this.handleChange}
+            addReminder={this.addReminder}
+          />
+
+          <Reminder
+            reminders={reminders}
+            deleteReminder={this.deleteReminder}
+          />
+
+          <Clear
+            clearReminders={this.clearReminders}
+          />
         </div>
-
-        <Form
-          text={this.state.text}
-          dueDate={this.state.dueDate}
-          handleChange={this.handleChange}
-          addReminder={this.addReminder}
-        />
-
-        <Reminder
-          reminders={reminders}
-          deleteReminder={this.deleteReminder}
-        />
-
-        <Clear
-          clearReminders={this.clearReminders}
-        />
       </div>
     );
   }
