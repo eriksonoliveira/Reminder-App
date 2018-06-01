@@ -23,13 +23,16 @@ const removeById =(state = [], id) => {
 
 const reminders = (state = [], action) => {
   let reminders = null;
+  const expDate = new Date();
+  expDate.setFullYear(new Date().getFullYear() + 1);
+
   //Initialize state with data at reminders cookie if any
   state = read_cookie('reminders');
   switch(action.type) {
     case ADD_REMINDER:
       reminders = [...state, newReminder(action)];
       //Save the content of reminders into a cookie
-      bake_cookie('reminders', reminders);
+      bake_cookie('reminders', reminders, expDate);
       return reminders;
 
       case DELETE_REMINDER:

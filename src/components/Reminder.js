@@ -6,7 +6,7 @@ import moment from 'moment';
 class Reminder extends Component {
   render() {
     return (
-      <ul className="list-group col-sm-4">
+      <ul className="list-group col-sm-12 col-lg-8">
         {
           this.props.reminders.map(reminder => {
             return (
