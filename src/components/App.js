@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+
 import Reminder from './Reminder';
 import Form from './Form';
 import Clear from './Clear';
+
 import background from '../images/background.jpeg';
+
 import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from '../actions';
 
