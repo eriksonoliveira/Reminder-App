@@ -1,19 +1,23 @@
-html, body {
+html,
+body {
   height: 100vh;
 }
 
-#root, .App {
+#root,
+.App {
   height: inherit;
   overflow-y: auto;
 }
 
 .App {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center;
+  justify-content: center; */
+  /* background-size: cover;
+  background-position: center; */
+  padding-top: 100px;
+  background-color: rgba(221, 205, 85, 0.623);
 }
 
 .navbar {
@@ -24,14 +28,22 @@ html, body {
 .title {
   margin-top: auto;
   text-align: center;
-  font-weight: bold;
-  color: #FFF;
-  text-shadow: 3px 3px 3px #888;
+  /* font-weight: bold; */
+  color: #111;
+  /* color: #fff; */
+  /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black; */
+  /* text-shadow: -1px -1px 1px #222; */
   font-size: 3rem;
 }
 
 input {
   margin: 5px;
+  border: 2px solid #111 !important;
+}
+
+input,
+.btn {
+  border: 2px solid #111 !important;
 }
 
 .reminder-form {
@@ -54,7 +66,7 @@ input {
 
 @media only screen and (max-width: 576px) {
   .App {
-    display: block;
+    padding-top: 50px;
   }
 
   .title {
@@ -66,8 +78,8 @@ input {
   }
 }
 
-@media only screen and (max-height: 768px) {
+/* @media only screen and (max-height: 768px) {
   .App {
     display: block;
   }
-}
+} */

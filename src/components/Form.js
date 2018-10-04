@@ -38,7 +38,7 @@ class Form extends Component {
             className="btn btn-success"
             onClick={() => this.props.addReminder()}
           >
-            Add Remainder
+            Add Reminder
           </button>
         </div>
       </div>

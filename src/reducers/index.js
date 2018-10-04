@@ -17,7 +17,7 @@ const removeById =(state = [], id) => {
   //Create a new array with all reminders in state except the one that the user
   //wants to remove
   const reminders = state.filter(reminder => reminder.id !== id);
-  console.log('new reduced reminders', reminders);
+  // console.log('new reduced reminders', reminders);
   return reminders;
 }
 
@@ -26,7 +26,7 @@ const reminders = (state = [], action) => {
   const expDate = new Date();
   expDate.setFullYear(new Date().getFullYear() + 1);
 
-  //Initialize state with data at reminders cookie if any
+  //Initialize state with data found in reminders cookie if any exists
   state = read_cookie('reminders');
   switch(action.type) {
     case ADD_REMINDER:

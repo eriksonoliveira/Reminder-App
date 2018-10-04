@@ -4,7 +4,7 @@ import Reminder from './Reminder';
 import Form from './Form';
 import Clear from './Clear';
 
-import background from '../images/background.jpeg';
+// import background from '../images/background.jpeg';
 
 import { connect } from 'react-redux';
 import { addReminder, deleteReminder, clearReminders } from '../actions';
@@ -41,16 +41,17 @@ class App extends Component {
 
 
   render() {
-    const backgroundImage = {
-      backgroundImage: `url(${background})`
-    };
+    // const backgroundImage = {
+    //   backgroundImage: `url(${background})`
+    // };
 
     const { reminders } = this.props;
     return(
-      <div
-        className="App"
-        style={backgroundImage}
-        >
+      <div className="App">
+       { // className="App"
+        // style={backgroundImage}
+        // >
+        }
         <div className="content-wrap d-flex flex-column align-items-center container">
           <div className="title mb-5">
             Reminde Me
@@ -78,7 +79,7 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state', state);
+  // console.log('state', state);
   return {
     reminders: state
   }
